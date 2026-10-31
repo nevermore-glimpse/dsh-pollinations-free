@@ -1,0 +1,46 @@
+{
+  "name": "dsh-pollinations-free",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "把 enter.pollinations.ai 上的免费模型（官方与社区）装载进 DeepSeek Harness 的模型选择器：目录自动同步，OpenAI Chat 兼容流式调用，无需登录；可选填入免费 API Key 解锁社区模型。",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "free-model",
+    "pollinations",
+    "llm-provider"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.2"
+  }
+}

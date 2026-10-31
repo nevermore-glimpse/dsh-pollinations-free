@@ -1,0 +1,7 @@
+# dsh-pollinations-free bundle patch.
+# One insert mounts the Host half; there is no browser half — the models show
+# up in the picker through the llm service the moment the adapter registers.
+- insert:
+    - id: pollinations-free
+      name: 'dsh-pollinations-free'
+      config: {}
